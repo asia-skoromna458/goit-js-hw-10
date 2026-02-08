@@ -29,7 +29,7 @@ const options = {
       if (selectedDate <= now) {
         iziToast.show({
     title: 'Alert',
-    message: 'WPlease choose a date in the future'
+    message: 'Please choose a date in the future'
 });
       
       startBtn.disabled = true;
@@ -91,7 +91,7 @@ const minutesEl = document.querySelector("[data-minutes]");
 const secondsEl = document.querySelector("[data-seconds]");
 
 function updateTimerUI({ days, hours, minutes, seconds }) {
-  daysEl.textContent = days;
+  daysEl.textContent = addLeadingZero(days);
   hoursEl.textContent = addLeadingZero(hours);
   minutesEl.textContent = addLeadingZero(minutes);
   secondsEl.textContent = addLeadingZero(seconds);
